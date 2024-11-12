@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  oracle-free:
+    image: container-registry.oracle.com/database/free:23.5.0.0-lite
+    container_name: oracle_free
+    ports:
+      - '1521:1521'
+    environment:
+      ORACLE_PWD: 1234
+      ORACLE_CHARACTERSET: AL32UTF8
