@@ -1,6 +1,7 @@
 services:
     activemq:
         image: webcenter/activemq:latest
+        container_name: activemq
         ports: 
             - 1099:1099
             - 8161:8161
