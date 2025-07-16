@@ -1,0 +1,18 @@
+services:
+  db1:
+    image: mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - db1_data:/var/lib/mysql
+    networks:
+      - db1_net
+    environment:
+        MYSQL_DATABASE: 'db1'
+        MYSQL_ROOT_PASSWORD: 'password'
+
+volumes:
+  db1_data:
+
+networks:
+  db1_net:

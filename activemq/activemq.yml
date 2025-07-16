@@ -1,0 +1,17 @@
+services:
+    activemq:
+        image: webcenter/activemq:latest
+        ports: 
+            - 1099:1099
+            - 8161:8161
+            - 61616:61616
+            - 61613:61613
+        volumes:
+            - activemq_data:/data/activemq
+            - activemq_log:/var/log/activemq
+        environment: 
+            ACTIVEMQ_ADMIN_LOGIN: admin
+            ACTIVEMQ_ADMIN_PASSWORD: admin
+volumes:
+    activemq_data:
+    activemq_log:
